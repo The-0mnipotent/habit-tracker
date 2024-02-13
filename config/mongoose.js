@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1/todo_list_db');
+mongoose.set("strictQuery", true);
 const db = mongoose.connection;
 // error
 db.on('error',console.error.bind(console,'erroe connecting to db'));
